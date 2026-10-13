@@ -392,7 +392,6 @@ mark {
   line-height: 1;
   white-space: nowrap;
 }
-.plan__price small { font-family: var(--f-body); font-weight: 600; font-size: 1rem; color: var(--ink-2); }
 .plan__desc { color: var(--ink-2); font-size: .98rem; line-height: 1.55; }
 .plan__desc + .plan__desc { margin-top: 10px; }
 .plan .btn { margin-top: auto; }
