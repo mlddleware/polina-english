@@ -143,6 +143,9 @@ a { color: inherit; }
 .nav__links a { font-weight: 600; text-decoration: none; padding: 6px 2px; }
 .nav__links a:hover { color: var(--violet); }
 .nav .btn { margin-left: 8px; }
+.nav .nav__login + .nav__trial { margin-left: 0; }
+.trial__login { margin-top: 18px; color: var(--ink-2); }
+.trial__login a { color: var(--violet-deep); font-weight: 700; }
 
 .logo { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
 .logo__name { font-family: var(--f-display); font-size: 1.3rem; line-height: 1; }
@@ -492,7 +495,8 @@ mark {
 
 @media (max-width: 860px) {
   .nav__links { display: none; }
-  .nav .btn { margin-left: auto; }
+  .nav .nav__login { margin-left: auto; }
+  .nav .nav__trial { margin-left: 8px; }
 
   .hero__grid, .about, .trial { grid-template-columns: 1fr; }
   .hero__media { max-width: 380px; margin-top: 12px; }
@@ -526,6 +530,8 @@ mark {
 }
 
 @media (max-width: 600px) {
+  /* the floating button below covers the trial; the header keeps only "Войти" */
+  .nav .nav__trial { display: none; }
   .hero__actions .btn { width: 100%; }
   .formats, .perks, .notes, .plans { grid-template-columns: 1fr; }
   .formats .format:last-child .format__img { aspect-ratio: 4 / 3; }

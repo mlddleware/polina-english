@@ -1,15 +1,13 @@
 (() => {
-  // --- WhatsApp links with a prefilled message ---
-  const PHONE = '77473617935';
-  const HELLO = 'Здравствуйте! Хочу записаться на пробный урок.';
-  const wa = (text) => `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
-
-  document.querySelectorAll('[data-wa]').forEach((a) => {
-    const extra = a.dataset.wa.trim();
-    a.href = wa(extra ? `${HELLO} ${extra}` : HELLO);
-    a.target = '_blank';
-    a.rel = 'noopener';
+  // --- links into the personal cabinet ---
+  // the site and the cabinet live on one server (/app); the GitHub Pages copy points to that server
+  const APP = location.hostname.endsWith('github.io') ? 'https://88-222-220-70.sslip.io/app' : '/app';
+  document.querySelectorAll('[data-app]').forEach((a) => {
+    a.href = APP + a.dataset.app;
   });
+
+  // --- WhatsApp stays as a contact in the footer ---
+  const wa = (text) => `https://wa.me/77473617935?text=${encodeURIComponent(text)}`;
   document.querySelectorAll('[data-wa-hello]').forEach((a) => {
     a.href = wa('Здравствуйте! Хочу к вам на занятия :)');
     a.target = '_blank';

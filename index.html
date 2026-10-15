@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dela+Gothic+One&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="img/hero.webp">
   <link rel="stylesheet" href="css/style.css">
-  <script>document.documentElement.classList.add('js')</script>
+  <script src="js/boot.js"></script>
 </head>
 <body>
 
@@ -44,7 +44,8 @@
       <a href="#lessons">Уроки</a>
       <a href="#prices">Цены</a>
     </nav>
-    <a class="btn btn--primary btn--sm" href="https://wa.me/77473617935" data-wa="">Пробный урок</a>
+    <a class="btn btn--ghost btn--sm nav__login" href="/app/login" data-app="/login">Войти</a>
+    <a class="btn btn--primary btn--sm nav__trial" href="/app/register?intent=trial" data-app="/register?intent=trial">Пробный урок</a>
   </div>
 </header>
 
@@ -63,9 +64,9 @@
           Уроки с реальными темами, шутками и практикой, всё как в жизни, только с прогрессом.
         </p>
         <div class="hero__actions">
-          <a class="btn btn--primary btn--lg" href="https://wa.me/77473617935" data-wa="">
-            <svg class="ico"><use href="#i-wa"/></svg>
+          <a class="btn btn--primary btn--lg" href="/app/register?intent=trial" data-app="/register?intent=trial">
             Записаться на пробный урок
+            <svg class="ico"><use href="#i-arrow"/></svg>
           </a>
           <a class="btn btn--ghost btn--lg" href="#prices">Смотреть цены</a>
         </div>
@@ -247,7 +248,7 @@
           <p class="plan__meta">12 часов в месяц</p>
           <p class="plan__price">72 000</p>
           <p class="plan__desc">Полностью под твои цели, уровень и интересы. Темп, темы и материалы подбираются персонально, чтобы обучение было максимально эффективным.</p>
-          <a class="btn btn--primary btn--block" href="https://wa.me/77473617935" data-wa="Интересуют индивидуальные занятия 3 раза в неделю.">Записаться</a>
+          <a class="btn btn--primary btn--block" href="/app/register?next=%2Fplans%3Fplan%3Dindividual-3" data-app="/register?next=%2Fplans%3Fplan%3Dindividual-3">Записаться</a>
         </article>
 
         <article class="plan" data-reveal>
@@ -256,7 +257,7 @@
           <p class="plan__meta">8 часов в месяц</p>
           <p class="plan__price">48 000</p>
           <p class="plan__desc">Полностью под твои цели, уровень и интересы. Темп, темы и материалы подбираются персонально, чтобы обучение было максимально эффективным.</p>
-          <a class="btn btn--primary btn--block" href="https://wa.me/77473617935" data-wa="Интересуют индивидуальные занятия 2 раза в неделю.">Записаться</a>
+          <a class="btn btn--primary btn--block" href="/app/register?next=%2Fplans%3Fplan%3Dindividual-2" data-app="/register?next=%2Fplans%3Fplan%3Dindividual-2">Записаться</a>
         </article>
 
         <article class="plan" id="plan-pair" data-reveal>
@@ -265,7 +266,7 @@
           <p class="plan__meta">8 часов в месяц</p>
           <p class="plan__price">36 000</p>
           <p class="plan__desc">Отличный формат, если хотите учиться вместе. Темы и материалы подбираются под общий уровень, а на уроках много разговорной практики, игр и взаимодействия.</p>
-          <a class="btn btn--primary btn--block" href="https://wa.me/77473617935" data-wa="Интересуют занятия в паре.">Записаться</a>
+          <a class="btn btn--primary btn--block" href="/app/register?next=%2Fplans%3Fplan%3Dpair" data-app="/register?next=%2Fplans%3Fplan%3Dpair">Записаться</a>
         </article>
 
         <article class="plan" id="plan-group" data-reveal>
@@ -275,7 +276,7 @@
           <p class="plan__price">28 000</p>
           <p class="plan__desc">Отличный формат, если хотите учиться в группе и прокачивать разговорный английский. Темы и материалы подбираются под общий уровень, на уроках много разговорной практики, парной и групповой работы, игр и активного взаимодействия.</p>
           <p class="plan__desc">Вы учитесь не только у меня, но и друг у друга, привыкаете говорить и понимать разные акценты и стили речи.</p>
-          <a class="btn btn--primary btn--block" href="https://wa.me/77473617935" data-wa="Интересуют групповые занятия.">Записаться</a>
+          <a class="btn btn--primary btn--block" href="/app/register?next=%2Fplans%3Fplan%3Dgroup" data-app="/register?next=%2Fplans%3Fplan%3Dgroup">Записаться</a>
         </article>
 
         <article class="plan" id="plan-async" data-reveal>
@@ -285,7 +286,7 @@
           <p class="plan__price">24 000</p>
           <p class="plan__desc">Для тех, кто хочет учиться в своём темпе. Ты получаешь видео с объяснениями грамматики и лексики, много дополнительных материалов, задания и обратную связь от меня.</p>
           <p class="plan__desc">Включено 3 онлайн-встречи для практики говорения.</p>
-          <a class="btn btn--primary btn--block" href="https://wa.me/77473617935" data-wa="Интересует асинхронный формат занятий.">Записаться</a>
+          <a class="btn btn--primary btn--block" href="/app/register?next=%2Fplans%3Fplan%3Dasync" data-app="/register?next=%2Fplans%3Fplan%3Dasync">Записаться</a>
         </article>
 
         <article class="plan" id="plan-club" data-reveal>
@@ -295,7 +296,7 @@
           <p class="plan__price">20 000</p>
           <p class="plan__desc">Разговорные встречи на английском, где нет домашнего задания и теории. Только живая практика, общение, обсуждения и разговорные игры, которые помогают говорить свободнее и увереннее.</p>
           <p class="plan__desc">После каждой встречи участники получают дополнительные материалы: лексику, полезные фразы и рекомендации для самостоятельной практики.</p>
-          <a class="btn btn--primary btn--block" href="https://wa.me/77473617935" data-wa="Интересует Speaking Club.">Записаться</a>
+          <a class="btn btn--primary btn--block" href="/app/register?next=%2Fplans%3Fplan%3Dclub" data-app="/register?next=%2Fplans%3Fplan%3Dclub">Записаться</a>
         </article>
       </div>
     </div>
@@ -315,10 +316,11 @@
             <li>Бесплатно</li>
           </ul>
           <p class="body-lg">На первом занятии мы знакомимся с учеником, я определяю уровень знаний и составляю полноценную программу обучения.</p>
-          <a class="btn btn--primary btn--lg" href="https://wa.me/77473617935" data-wa="">
-            <svg class="ico"><use href="#i-wa"/></svg>
-            Записаться в WhatsApp
+          <a class="btn btn--primary btn--lg" href="/app/register?intent=trial" data-app="/register?intent=trial">
+            Записаться на пробный урок
+            <svg class="ico"><use href="#i-arrow"/></svg>
           </a>
+          <p class="trial__login">Уже занимаетесь? <a href="/app/login" data-app="/login">Войти в кабинет</a></p>
         </div>
         <div class="trial__chat" aria-hidden="true">
           <div class="bubble bubble--q">
@@ -355,8 +357,7 @@
 </footer>
 
 <div class="mobile-cta" aria-hidden="true">
-  <a class="btn btn--primary btn--block" href="https://wa.me/77473617935" data-wa="" tabindex="-1">
-    <svg class="ico"><use href="#i-wa"/></svg>
+  <a class="btn btn--primary btn--block" href="/app/register?intent=trial" data-app="/register?intent=trial" tabindex="-1">
     Бесплатный пробный урок
   </a>
 </div>
