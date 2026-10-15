@@ -1,0 +1,51 @@
+/* Shared look of the brand images: the same tokens as the site (css/style.css). */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dela+Gothic+One&family=Onest:wght@600;700&display=block");
+
+:root {
+  --board: #EDF0F4;
+  --dot: #C3CBD6;
+  --paper: #FFFFFF;
+  --ink: #1F1A2E;
+  --ink-2: #4E4963;
+  --violet: #8B3FDB;
+  --violet-deep: #5E1FA8;
+  --lilac: #E6D6FF;
+  --sticky: #FFEC85;
+  --pink: #FFD0E6;
+  --sky: #CFE4F1;
+  --f-display: "Dela Gothic One", "Arial Black", sans-serif;
+  --f-body: "Onest", system-ui, sans-serif;
+  --f-hand: "Caveat", cursive;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+html, body { width: 100vw; height: 100vh; overflow: hidden; }
+body { font-family: var(--f-body); color: var(--ink); }
+
+/* the dotted board from the site */
+.board {
+  background-color: var(--board);
+  background-image: radial-gradient(var(--dot) var(--dot-r, 1.6px), transparent calc(var(--dot-r, 1.6px) + .6px));
+  background-size: var(--dot-gap, 22px) var(--dot-gap, 22px);
+}
+
+/* logo: the same as the site header */
+.logo { display: inline-flex; align-items: center; gap: .26em; }
+.logo__name { font-family: var(--f-display); line-height: 1; }
+.logo__tag {
+  font-weight: 700; font-size: .38em; letter-spacing: .08em; text-transform: uppercase;
+  background: var(--violet); color: #fff; padding: .3em .55em; border-radius: .45em; rotate: -5deg;
+}
+
+/* paper stickers */
+.sticker {
+  position: absolute; font-family: var(--f-hand); font-weight: 700; line-height: 1;
+  padding: .35em .6em .4em; border-radius: .3em;
+  box-shadow: 0 0 0 .12em var(--paper), 0 .35em .6em -.25em rgba(31, 26, 46, .45);
+}
+.sticker--yellow { background: var(--sticky); }
+.sticker--pink { background: var(--pink); }
+.sticker--sky { background: var(--sky); }
+.sticker--lilac { background: var(--lilac); }
+
+.hand { font-family: var(--f-hand); font-weight: 700; color: var(--ink-2); }

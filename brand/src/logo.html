@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Logo</title>
+<link rel="stylesheet" href="brand.css">
+<!-- 1200×400 logo on a transparent background (rendered with a transparent page);
+     ?white gives the variant for dark backgrounds -->
+<style>
+  html, body { background: transparent; }
+  body { display: grid; place-items: center; }
+  .logo { font-size: 130px; }
+  .white .logo__name { color: #fff; }
+</style>
+<body>
+  <div class="logo"><span class="logo__name">P.lingua</span><span class="logo__tag">School</span></div>
+  <script>
+    if (location.search.includes('white')) document.body.classList.add('white');
+  </script>
+</body>

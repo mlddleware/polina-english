@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Avatar: monogram</title>
+<link rel="stylesheet" href="brand.css">
+<!-- 640×640 bot photo: Telegram shows it as a circle, so everything stays inside it -->
+<style>
+  body { background: var(--violet); }
+  svg { display: block; width: 100%; height: 100%; }
+  text { font-family: var(--f-display); }
+</style>
+<svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="2.6" fill="#fff" fill-opacity=".16" />
+    </pattern>
+  </defs>
+  <rect width="640" height="640" fill="#8B3FDB" />
+  <rect width="640" height="640" fill="url(#dots)" />
+  <g transform="rotate(-6 320 320) translate(2 0)">
+    <!-- 3D edge like the site's buttons -->
+    <text x="300" y="482" font-size="430" text-anchor="middle" fill="#5E1FA8">P</text>
+    <circle cx="470" cy="434" r="46" fill="#5E1FA8" />
+    <text x="300" y="466" font-size="430" text-anchor="middle" fill="#fff">P</text>
+    <circle cx="470" cy="418" r="46" fill="#FFEC85" />
+  </g>
+</svg>
